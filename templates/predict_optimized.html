@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Prediction (Optimized Model)</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS if needed -->
+    <style>
+        /* Your custom CSS styles go here */
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        body{
+            background-color: #000;
+        }
+        h1{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Emotion Prediction (Optimized Model)</h1>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Input Text:</h5>
+                <p class="card-text">{{ text }}</p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Predicted Emotion:</h5>
+                <p class="card-text">{{ labels }}</p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Emotion Score:</h5>
+                <p class="card-text">{{ scores }}</p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Latency:</h5>
+                <p class="card-text">{{ latency }} seconds</p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Number of Parameters in Quantized Model:</h5>
+                <p class="card-text">{{ quantized_model_size }} MB</p>
+            </div>
+        </div>
+        <a href="/" class="btn btn-warning mt-3">Back to Home</a>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

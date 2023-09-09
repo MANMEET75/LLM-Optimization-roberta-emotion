@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Prediction</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS if needed -->
+    <style>
+        /* Your custom CSS styles go here */
+        .navbar-text {
+            color: white; /* Change text color to contrast with the background */
+        }
+        .navbar-brand{
+            font-size: 45px;
+            font-weight: 800;
+        }
+        body{
+            background-color: #000;
+        }
+        h1{
+            color: #fff;
+        }
+        p{
+            color: #fff;
+        }
+        h3{
+            color: #fff;
+        }
+        label{
+            color: #fff;
+        }
+        /* Add more custom styles as needed */
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <center>
+        <h1 class="navbar-brand mt-4 m-5">Text Emotion Classification Using LLM</h1>
+    </center>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Base Model</h3>
+                <center>
+                    <img src="https://workable-application-form.s3.amazonaws.com/advanced/production/61557f91d9510741dc62e7f8/c3635b59-a3d2-444a-b636-a9d0061dcdde" alt="Image 1" width="200" class="img-fluid mb-2"> <!-- Replace 'image1.jpg' with your image URL -->
+                </center>
+                <form action="/predict_base" method="POST">
+                    <div class="form-group">
+                        <label for="text">Enter text:</label>
+                        <input type="text" class="form-control" id="text" name="text" required>
+                    </div>
+                    <button type="submit" class="btn btn-block" style="background-color: #FFCC4D;">Predict (Base Model)</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Optimized</h3>
+                <center>
+                    <img src="https://workable-application-form.s3.amazonaws.com/advanced/production/61557f91d9510741dc62e7f8/c3635b59-a3d2-444a-b636-a9d0061dcdde" alt="Image 1" width="200" class="img-fluid mb-2"> <!-- Replace 'image1.jpg' with your image URL -->
+                </center>                
+                <form action="/predict_optimized" method="POST">
+                    <div class="form-group">
+                        <label for="text">Enter text:</label>
+                        <input type="text" class="form-control" id="text" name="text" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Predict (Optimized Model)</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
