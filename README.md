@@ -1,2 +1,2 @@
 # LLM-Optimization-roberta-emotion
-<img src="images/demo.png">
+<img src="static/images/demo.png">
